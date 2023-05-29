@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "186844175177",
+    "project_id": "loginpractice-1624b",
+    "storage_bucket": "loginpractice-1624b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:186844175177:android:aad9fb7c2c764fde801898",
+        "android_client_info": {
+          "package_name": "com.example.practiceforlogin"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDlzTBuzpxn5Jmhlj4eo6pJ-cxaxAlwHlM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
