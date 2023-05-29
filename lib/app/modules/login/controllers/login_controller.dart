@@ -3,6 +3,7 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:http/http.dart' as http;
+import 'package:practiceforlogin/main.dart';
 
 import '../../../routes/app_pages.dart';
 class LoginController extends GetxController {
@@ -67,6 +68,7 @@ class LoginController extends GetxController {
         final json = jsonDecode(response.body);
         emailController.value.clear();
         passwordController.value.clear();
+        box.write('Login', true);
         Get.offAllNamed(Routes.HOME);
         print(response.body);
         // if (json['code'] == 0) {
