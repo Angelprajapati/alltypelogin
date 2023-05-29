@@ -8,21 +8,15 @@ import '../../../Model/getDemoModel.dart';
 
 class HomeController extends GetxController  with GetSingleTickerProviderStateMixin {
   //TODO: Implement HomeController
-  final List<Tab> myTabs = <Tab>[
-    const Tab(text: 'Every  Day'),
-    const Tab(text: 'Every hour'),
-  ];
-  late TabController controller;
+  Rx<TabController>? tabController;
+  RxInt selectedIndex = 0.obs;
   final count = 0.obs;
   var UserList = <getDemoModel>[].obs;
   RxBool hasData = false.obs;
 
   @override
   void onInit() {
-    controller = TabController(vsync: this, length: myTabs.length);
-    controller.addListener(() {
-      print("index${controller.index}");
-    });
+    tabController = TabController(length: 4, vsync: this).obs;
     fetchAlbumData();
     super.onInit();
   }
