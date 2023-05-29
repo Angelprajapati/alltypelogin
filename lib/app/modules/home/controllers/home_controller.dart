@@ -41,12 +41,12 @@ class HomeController extends GetxController  with GetSingleTickerProviderStateMi
 
   Future<void> fetchAlbumData() async {
     UserList.clear();
+    // hasData.value = false;
     http.Response response = await http
         .get(Uri.parse("https://jsonplaceholder.typicode.com/users"))
         .catchError((error) {
       print("Error: $error");
     });
-    print("Data := ${response.statusCode}");
     if (response.statusCode == 200) {
       hasData.value = true;
       print("Data := ${jsonDecode(response.body)}");
